@@ -2,21 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Clarity Money</title>
   </head>
   <body>
-    <div class="container-sm">
+    <div class="container">
 
-      <div class="card text-center header">
+      <!-- add gradient bg -->
+      <div class="card shadow text-center header">
         <h4 class="text-left">header</h4>
         <p class="text-muted">Welcome Matthew</p>
         <h6 class="quote">Whatever you are be a good one</h6>
         <small>- A. Lincoln</small>
       </div>
 
-      <div class="balance card">
+      <div class="balance card shadow">
         <h4 class="text-left">balance</h4>
         <div class="panel cash">
           <div class="row">
@@ -40,53 +41,65 @@
         </div>
       </div>
 
-      <div class="spending card">
-        <h4 class="text-left">spending</h4>
+      <div class="spending card py-4 shadow greenSpending">
+        <!-- <h4 class="text-left">spending</h4> -->
+        <p class="text-center mb-0">
+          You spent <span class="text-white">$80.96</span>
+          <br> the last few days
+        </p>
+        <div class="text-center my-3">
+          <img
+          class="img-responsive coinImg text-center"
+          src="./coin.png"
+          alt="coin img">
+        </div>
+        <span class="text-center">You are on track.</span>
       </div>
 
-      <div class="transactions card">
+      <div class="transactions card shadow">
         <h4 class="text-left">transactions</h4>
       </div>
 
-      <div class="loan card">
+      <div class="loan card shadow">
         <h4 class="text-left">loan</h4>
       </div>
 
-      <div class="connectAccounts card">
+      <div class="connectAccounts card shadow">
         <h4 class="text-left">connectAccounts</h4>
       </div>
 
-      <div class="income card">
+      <div class="income card shadow">
         <h4 class="text-left">income</h4>
       </div>
 
-      <div class="monthBreakdown card">
+      <div class="monthBreakdown card shadow">
         <h4 class="text-left">monthBreakdown</h4>
       </div>
 
-      <div class="whereISpendMost card">
+      <div class="whereISpendMost card shadow">
         <h4 class="text-left">whereISpendMost</h4>
       </div>
 
-      <div class="monthGraph card">
+      <div class="monthGraph card shadow">
         <h4 class="text-left">monthGraph</h4>
       </div>
 
-      <div class="cancelMonthlyMemberships card">
+      <div class="cancelMonthlyMemberships card shadow">
         <h4 class="text-left">cancelMonthlyMemberships</h4>
       </div>
 
-      <div class="creditScore card">
+      <div class="creditScore card shadow">
         <h4 class="text-left">creditScore</h4>
       </div>
 
-      <div class="creditCardDebt card">
+      <div class="creditCardDebt card shadow">
         <h4 class="text-left">creditCardDebt</h4>
       </div>
 
-      <div class="misc card">
+      <div class="misc card shadow">
         <h4 class="text-left">misc</h4>
       </div>
+
     </div>
   </body>
 </html>
