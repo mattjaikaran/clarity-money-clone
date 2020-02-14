@@ -1,19 +1,115 @@
 /* global */
-
-.greenSpending {
-  background-color: #4caf50 !important;
+body {
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
-.coinImg { max-width: 50px; }
+.greenSpending {
+  background-color: #5bd0b3 !important;
+}
+.text-green { color: #5bd0b3; }
+.text-welcome {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+/* h2, h5, h6 { font-weight: 400 !important; } */
+
+.coin-img { max-width: 50px !important; }
+.transaction-img { max-width: 24px; }
+.spotify-img {
+  max-width: 20px;
+  margin-right: 4px;
+}
+.piggy-bank-img {
+  max-width: 60px;
+}
+
+.quote {
+  padding: 0 29%;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.first-card {
+  margin-top: 0 !important;
+}
+
+p { font-size: 0.8em; }
+p.p-bigger { font-size: 0.9em; }
+
+.decimal {
+  font-size: 0.6em;
+}
+.caret-down {
+  max-width: 0.6em;
+  margin-left: 3px;
+  padding-bottom: 3px;
+}
+
+.btn.focus, .btn:focus {
+  box-shadow: none !important;
+}
+
+.card-body {
+  padding: 1rem !important;
+}
+
+hr.transaction-hr {
+  margin-top: 5px !important;
+  margin-bottom: 15px !important;
+}
+
+.btn-outline-secondary {
+  font-size: 0.9rem !important;
+}
+
+.btn-outline-secondary:hover {
+}
+.disclaimer {
+  font-size: 0.6rem;
+}
+.btn-block {
+  color: white !important;
+  font-size: 0.9rem !important;
+  padding: 10px 0 !important;
+  align-content: center;
+}
+.btn-learn-more {
+  background-color: black !important;
+}
+.btn-link-accounts {
+  background-color: #5bd0b3 !important;
+}
+.insights-text {
+  font-size: 1rem !important;
+}
+.monthBreakdown {
+  background-color: #192a56 !important;
+}
+
+
+
+
 
 /* mobile */
 @media (max-width: 767px) {
-  .container {
+  .containerCustom {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .containerInner {
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
   .card {
     margin-top: 10px;
-    padding: 5px;
+    padding: 10px;
+  }
+  .header {
+    padding: 25px 0!important;
+    background: #C04848;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    background: linear-gradient(to right, #480048, #C04848);
   }
 }
 

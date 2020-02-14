@@ -7,99 +7,281 @@
     <title>Clarity Money</title>
   </head>
   <body>
-    <div class="container">
+    <div class="text-center header">
+      <p class="text-welcome mb-2">Welcome Matthew</p>
+      <h6 class="quote text-white font-weight-normal">
+        <!-- Whatever you are be a good one. Whatever you  -->
+        Take time to smell the compound interest.
+      </h6>
+    </div>
 
-      <!-- add gradient bg -->
-      <div class="card shadow text-center header">
-        <h4 class="text-left">header</h4>
-        <p class="text-muted">Welcome Matthew</p>
-        <h6 class="quote">Whatever you are be a good one</h6>
-        <small>- A. Lincoln</small>
-      </div>
-
-      <div class="balance card shadow">
-        <h4 class="text-left">balance</h4>
-        <div class="panel cash">
-          <div class="row">
-            <div class="col-10">
+    <div class="balance card first-card">
+      <div class="containerInner">
+        <div class="panel cash align-items-center">
+          <div class="row mt-3">
+            <div class="col-6">
               <p>Cash</p>
             </div>
-            <div class="col-2">
-              <p class="text-primary">$4000</p>
+            <div class="col-6 text-right">
+              <p class="text-green d-inline">$4,470.<span class="decimal">39</span></p>
             </div>
           </div>
         </div>
-        <div class="panel credit">
+        <hr>
+        <div class="panel credit align-items-center">
           <div class="row">
-            <div class="col-10">
-              <p class="card-title">Credit Debt</p>
+            <div class="col-6">
+              <p class="card-title mb-0">Credit Debt</p>
             </div>
-            <div class="col-2">
-              <p>$1000</p>
+            <div class="col-6 text-right">
+              <p>$1,089.<span class="decimal">72</span></p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+
+    <div class="containerCustom">
 
       <div class="spending card py-4 shadow greenSpending">
         <!-- <h4 class="text-left">spending</h4> -->
-        <p class="text-center mb-0">
+        <p class="text-center p-bigger mb-0">
           You spent <span class="text-white">$80.96</span>
           <br> the last few days
         </p>
         <div class="text-center my-3">
           <img
-          class="img-responsive coinImg text-center"
+          class="img-responsive coin-img text-center"
           src="./coin.png"
           alt="coin img">
         </div>
-        <span class="text-center">You are on track.</span>
+        <p class="text-center">You are on track.</p>
       </div>
 
-      <div class="transactions card shadow">
-        <h4 class="text-left">transactions</h4>
+      <div class="transactions card shadow-sm">
+        <div class="row mt-0">
+          <div class="col-6">
+            <button
+            class="btn d-inline"
+            type="button"
+            data-toggle="collapse"
+            data-target="#transactionsCollapse"
+            aria-expanded="false"
+            aria-controls="transactionsCollapse">
+              Transactions
+              <img src="./caret-down.png" class="caret-down" alt="caret-down">
+            </button>
+          </div>
+          <div class="col-6 text-right">
+            <button
+            class="btn d-inline"
+            type="button"
+            data-toggle="collapse"
+            data-target="#transactionsCollapse"
+            aria-expanded="false"
+            aria-controls="transactionsCollapse">
+              Most Recent
+              <img src="./caret-down.png" class="caret-down" alt="caret-down">
+            </button>
+          </div>
+        </div>
+
+        <hr class="transaction-hr">
+
+        <div class="collapse show" id="transactionsCollapse">
+          <div class="transactions-content card-body">
+            <div class="row">
+              <div class="col-6">
+                <p class="card-title mb-0">
+                  <img
+                  class="img-responsive transaction-img text-center"
+                  src="./coin.png"
+                  alt="coin img">
+                  Ticketmaster (pending)
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <p>$580.<span class="decimal">00</span></p>
+              </div>
+            </div>
+
+            <hr class="transaction-hr">
+
+            <div class="row">
+              <div class="col-6">
+                <p class="card-title mb-0">
+                  <img
+                  class="img-responsive transaction-img text-center"
+                  src="./coin.png"
+                  alt="coin img">
+                  C-Town Grocery
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <p>$76.<span class="decimal">80</span></p>
+              </div>
+            </div>
+
+            <hr class="transaction-hr">
+
+            <div class="row">
+              <div class="col-6">
+                <p class="card-title mb-0">
+                  <img
+                  class="img-responsive transaction-img text-center"
+                  src="./coin.png"
+                  alt="coin-img">
+                  Direct Deposit
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <p>$4076.<span class="decimal">80</span></p>
+              </div>
+            </div>
+
+            <hr class="transaction-hr">
+
+            <div class="row">
+              <div class="col-6">
+                <p class="card-title mb-0">
+                  <img
+                  class="img-responsive spotify-img text-center"
+                  src="./spotify.png"
+                  alt="spotify-img">
+                  Spotify
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <p>$10.<span class="decimal">91</span></p>
+              </div>
+            </div>
+
+            <hr class="transaction-hr">
+
+            <div class="row">
+              <div class="col-6">
+                <p class="card-title mb-0">
+                  <img
+                  class="img-responsive transaction-img text-center"
+                  src="./paypal.png"
+                  alt="paypal-img">
+                  PayPal Deposit
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <p>$455.<span class="decimal">80</span></p>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
       </div>
 
-      <div class="loan card shadow">
-        <h4 class="text-left">loan</h4>
+      <div class="loan card shadow-sm">
+        <div class="text-center mt-3 mb-1">
+          <h6 class="d-inline font-weight-normal">I want to save <br><br>for a</h6>
+          <button
+          class="btn btn-outline-secondary d-inline"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample">
+            long egg
+            <img src="./caret-down.png" class="caret-down" alt="caret-down">
+          </button>
+          <div class="text-center my-4">
+            <img
+            class="img-responsive piggy-bank-img text-center"
+            src="./piggy-bank.png"
+            alt="coin img">
+          </div>
+          <div class="mt-4">
+            <h5 class="font-weight-normal">Earn 1.70%</h5>
+            <small class="disclaimer">
+              Annual Percentage Yield
+              <a href="#">Learn More</a>
+            </small>
+            <button class="mt-2 btn btn-block btn-learn-more">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div class="connectAccounts card shadow">
-        <h4 class="text-left">connectAccounts</h4>
+      <div class="connectAccounts card shadow-sm">
+        <div class="text-center mt-3 mb-1">
+          <h6 class="font-weight-normal">Connect More Accounts</h6>
+          <hr>
+          <img src="" alt="">
+          <p class="insights-text">
+            The more accounts you connect, the better our insights are.
+          </p>
+          <button class="mt-2 btn btn-block btn-link-accounts">
+            Link Other Accounts
+          </button>
+        </div>
       </div>
 
-      <div class="income card shadow">
-        <h4 class="text-left">income</h4>
+      <div class="income card shadow-sm">
+        <div class="text-center mt-3 mb-1">
+          <h6 class="d-inline font-weight-normal">Income so far this month</h6>
+          <h2 class="text-green mt-1">$961.86</h2>
+          <img class="" src="" alt="money-img">
+        </div>
       </div>
 
-      <div class="monthBreakdown card shadow">
-        <h4 class="text-left">monthBreakdown</h4>
+      <div class="monthBreakdown card shadow-sm">
+        <div class="text-center my-1">
+          <h6 class="text-white font-weight-normal mb-2">February</h6>
+          <p class="text-green mb-1">Income</p>
+          <h5 class="text-green font-weight-normal">$10,000</h5>
+          <img src="" alt="graph-here">
+          <div class="budget-spent-left row mt-4">
+            <div class="col-6 text-white">
+              <p class="mb-1">Spent</p>
+              <h5 class="font-weight-normal">$2000</h5>
+            </div>
+            <div class="col-6 text-green">
+              <p class="mb-1">Left</p>
+              <h5 class="font-weight-normal">$8000</h5>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="whereISpendMost card shadow">
+      <div class="whereISpendMost card shadow-sm">
         <h4 class="text-left">whereISpendMost</h4>
       </div>
 
-      <div class="monthGraph card shadow">
+      <div class="monthGraph card shadow-sm">
         <h4 class="text-left">monthGraph</h4>
       </div>
 
-      <div class="cancelMonthlyMemberships card shadow">
+      <div class="cancelMonthlyMemberships card shadow-sm">
         <h4 class="text-left">cancelMonthlyMemberships</h4>
       </div>
 
-      <div class="creditScore card shadow">
+      <div class="creditScore card shadow-sm">
         <h4 class="text-left">creditScore</h4>
       </div>
 
-      <div class="creditCardDebt card shadow">
+      <div class="creditCardDebt card shadow-sm">
         <h4 class="text-left">creditCardDebt</h4>
       </div>
 
-      <div class="misc card shadow">
+      <div class="misc card shadow-sm">
         <h4 class="text-left">misc</h4>
       </div>
 
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
