@@ -2,20 +2,35 @@
 body {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
+.card { border-radius: 0.8em !important; }
 .greenSpending {
   background-color: #5bd0b3 !important;
 }
 .text-green { color: #5bd0b3; }
+.text-black { color: black; }
+.bg-black {
+  background-color: black !important;
+  color: white;
+}
+.bg-darkblue {
+  background-color: #192a56 !important;
+  color: white;
+}
 .text-welcome {
   color: rgba(255, 255, 255, 0.4) !important;
   font-weight: 300;
   font-size: 0.8em;
 }
 
-/* h2, h5, h6 { font-weight: 400 !important; } */
-
 .coin-img { max-width: 50px !important; }
 .transaction-img { max-width: 24px; }
+.edit-img {
+  max-width: 14px;
+}
+.verizon-img {
+  max-width: 20px;
+  margin-right: 4px;
+}
 .spotify-img {
   max-width: 20px;
   margin-right: 4px;
@@ -23,11 +38,14 @@ body {
 .piggy-bank-img {
   max-width: 60px;
 }
-
 .quote {
   padding: 0 29%;
   font-weight: 400;
   font-size: 0.9em;
+}
+.copy {
+  padding: 0 17%;
+  font-size: 0.8em;
 }
 
 .first-card {
@@ -66,7 +84,16 @@ hr.transaction-hr {
 .btn-outline-secondary:hover {
 }
 .disclaimer {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+.credit-score-updated-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.disclaimer-alt {
+  font-size: 0.7rem;
+  font-weight: 300;
 }
 .btn-block {
   color: white !important;
@@ -81,12 +108,22 @@ hr.transaction-hr {
   background-color: #5bd0b3 !important;
 }
 .insights-text {
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
 }
 .monthBreakdown {
   background-color: #192a56 !important;
 }
-
+.card-header {
+  background-color: white !important;
+}
+.chaseCreditCard {
+  background-color: #1a2da6 !important;
+  color: white;
+  padding: 5px 10px;
+}
+.sapphire-card {
+  border-radius: 0.8rem;
+}
 
 
 
@@ -107,9 +144,9 @@ hr.transaction-hr {
   }
   .header {
     padding: 25px 0!important;
-    background: #C04848;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #480048, #C04848);
-    background: linear-gradient(to right, #480048, #C04848);
+    background: #480048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #C04848, #480048);
+    background: linear-gradient(to right, #C04848, #480048);
   }
 }
 
