@@ -3,7 +3,6 @@ import React from 'react'
 const Spending = (props) => {
   return (
     <div className="spending col-md-4 col-sm-6 card py-4 shadow bg-green">
-      <h4 className="text-left">spending</h4>
       <p className="text-center p-bigger mb-0">
         You spent <span className="text-white">$80.96</span>
         <br /> the last few days
