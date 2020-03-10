@@ -13,10 +13,10 @@ const Transactions = (props) => {
             aria-expanded="false"
             aria-controls="transactionsCollapse">
             All Transactions
-              <img 
-                src={require('../../img/caret-down.png')} 
-                className="caret-down" 
-                alt="caret-down" />
+            <img 
+              src={require('../../img/caret-down.png')} 
+              className="caret-down" 
+              alt="caret-down" />
             </button>
           </div>
           <div className="col-6 text-right">
@@ -34,26 +34,26 @@ const Transactions = (props) => {
                 alt="caret-down" />
             </button>
           </div>
-          </div>
+        </div>
 
-          <hr className="transaction-hr" />
+        <hr className="transaction-hr" />
 
-          <div className="collapse show" id="transactionsCollapse">
-            <div className="transactions-content card-body">
-              <div className="row">
-                <div className="col-6">
-                  <p className="card-title mb-0">
-                    <img
-                      className="img-responsive transaction-img text-center"
-                      src={require('../../img/coin.png')}
-                      alt="coin img" />
-                      Ticketmaster (pending)
-                  </p>
-                </div>
-                  <div className="col-6 text-right">
-                    <p>$580.<span className="decimal">00</span></p>
-                  </div>
-                </div>
+        <div className="collapse show" id="transactionsCollapse">
+          <div className="transactions-content card-body">
+            <div className="row">
+              <div className="col-6">
+                <p className="card-title mb-0">
+                  <img
+                    className="img-responsive transaction-img text-center"
+                    src={require('../../img/coin.png')}
+                    alt="coin img" />
+                    Ticketmaster (pending)
+                </p>
+              </div>
+              <div className="col-6 text-right">
+                <p>$580.<span className="decimal">00</span></p>
+              </div>
+            </div>
 
           <hr className="transaction-hr" />
 

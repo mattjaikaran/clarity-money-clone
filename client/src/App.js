@@ -23,20 +23,22 @@ function App() {
     <div className="app">
       <Header />
       <Balance />
-      <Spending />
-      <Transactions />
-      <Loan />
-      <ConnectAccounts />
-      <Income />
-      <MonthBreakdown />
-      <WhereISpend />
-      <MonthGraph />
-      <CancelMonthly />
-      <CreditScore />
-      <CreditCardDebt />
-      <HowItWorks />
-      <ShareWithFriends />
-      <ThankYou />
+      <div className="container">
+        <Spending />
+        <Transactions />
+        <Loan />
+        <ConnectAccounts />
+        <Income />
+        <MonthBreakdown />
+        <WhereISpend />
+        <MonthGraph />
+        <CancelMonthly />
+        <CreditScore />
+        <CreditCardDebt />
+        <HowItWorks />
+        <ShareWithFriends />
+        <ThankYou />
+      </div>
     </div>
   )
 }
