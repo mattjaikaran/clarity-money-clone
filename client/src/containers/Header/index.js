@@ -17,6 +17,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: 14,
+    color: 'rgba(255, 255, 255, 0.4)'
   },
   message: {
     fontSize: '1.2rem',
