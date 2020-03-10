@@ -1,32 +1,67 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    padding: '0 1em',
+    flexGrow: 1
+  },
+  top: {
+    marginTop: '0'
+  },
+  title: {
+    fontSize: 14,
+  },
+  number: {
+    textAlign: 'right'
+  },
+  positive: {
+    color: '#22d0a5'
+  },
+  hr: {
+    margin: '20px 0'
+  },
+})
 
 const Balance = (props) => {
+  const classes = useStyles()
+
   return (
-    <div className="balance col-md-4 col-sm-6 bg-white first-card">
-      <div className="containerInner">
-        <div className="panel cash align-items-center">
-          <div className="first-card-row mt-3">
-            <div className="col-6">
-              <p>Cash</p>
-            </div>
-            <div className="col-6 text-right">
-              <p className="text-green d-inline">$4,470.<span className="decimal">39</span></p>
-            </div>
-          </div>
-        </div>
-        <hr className="transaction-hr" />
-          <div className="panel credit align-items-center">
-            <div className="first-card-row">
-              <div className="col-6">
-                <p className="card-title mb-0">Credit Debt</p>
-              </div>
-              <div className="col-6 text-right">
-                <p>$1,089.<span className="decimal">72</span></p>
-              </div>
-            </div>
-          </div>
-      </div>
-      </div>
+    <Card className={classes.root}>
+      <CardContent>
+        <Grid className={classes.top} container spacing={3}>
+          <Grid item xs={6}>
+            <Typography variant="body2" component="p">
+              Cash
+            </Typography>
+          </Grid>
+          <Grid className={classes.number} item xs={6}>
+            <Typography className={classes.positive} variant="body2" component="p">
+              $4,470.39
+            </Typography>
+          </Grid>
+        </Grid>
+        <hr className={classes.hr} />
+        <Grid container spacing={3}>
+          <Grid item xs={6}>
+            <Typography variant="body2" component="p">
+              Credit Debt
+            </Typography>
+          </Grid>
+          <Grid className={classes.number} item xs={6}>
+            <Typography  variant="body2" component="p">
+              $1,038.22
+            </Typography>
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
   )
 }
 
