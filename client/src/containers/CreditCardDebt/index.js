@@ -17,7 +17,7 @@ const CreditCardDebt = (props) => {
               <small className="font-weight-light">Chase Sapphire Card</small>
             </div>
             <div className="col-1">
-              <a href="#">
+              <a href="#!">
                 <img src={require('../../img/edit.png')} className="edit-img" alt="" />
               </a>
             </div>

@@ -34,7 +34,7 @@ const Spending = (props) => {
           You spent <span className={classes.moneySpent}>$80.88</span> <br />
           the last few days
         </Typography>
-        <img className={classes.coinImg} src={require("../../img/coin.png")} />
+        <img className={classes.coinImg} src={require("../../img/coin.png")} alt="coin" />
         <Typography variant="body2" component="p">
           You are on track.
         </Typography>

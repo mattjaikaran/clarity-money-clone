@@ -24,7 +24,7 @@ const CreditScore = (props) => {
           </small>
           <small className="disclaimer-alt">
             *VantageScore 3.0&reg; powered by Experian&reg;
-            <a href="#">Learn More</a>
+            <a href="#!">Learn More</a>
           </small>
         </div>
       </div>

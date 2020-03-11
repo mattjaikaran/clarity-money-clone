@@ -2,7 +2,6 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
 import AllTransactionsButton from './components/AllTransactionsButton'
@@ -21,6 +20,9 @@ const useStyles = makeStyles(theme => ({
   right: {
     textAlign: 'right',
   },
+  table: {
+    marginTop: '1rem',
+  },
 }))
 
 const Transactions = (props) => {
@@ -37,7 +39,9 @@ const Transactions = (props) => {
             <TransactionsTimelineButton />
           </Grid>
         </Grid>
-        <TransactionsTable />
+        <Grid item xs={12} className={classes.table}>
+          <TransactionsTable />
+        </Grid>
       </CardContent>
     </Card>
   )

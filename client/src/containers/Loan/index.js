@@ -27,7 +27,7 @@ const Loan = (props) => {
           <h5 className="font-weight-normal">Earn 1.70%</h5>
           <small className="disclaimer">
             Annual Percentage Yield
-            <a href="#">Learn More</a>
+            <a href="#!">Learn More</a>
           </small>
           <button className="mt-2 btn btn-block btn-learn-more">
             Learn More
