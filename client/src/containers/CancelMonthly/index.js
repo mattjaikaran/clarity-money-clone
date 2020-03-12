@@ -1,91 +1,56 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+
+import CancelMonthlyTable from './components/CancelMonthlyTable'
+
+const useStyles = makeStyles({
+  root: {
+    marginTop: '1em',
+    width: '100%',
+    textAlign: 'center'
+  },
+  header: {
+    color: 'black',
+    padding: '14px 16px 3px 16px'
+  },
+  title: {
+    marginTop: '10px',
+  },
+  btnContainer: {
+    marginTop: '10px',
+  },
+  bankIcon: {
+    maxWidth: '80px',
+    margin: '1em 0'
+  },
+  btn: {
+    backgroundColor: '#22d0a5',
+    width: '100%',
+    color: 'white',
+    padding: '1em 0',
+    '&:hover': {
+      background: 'black',
+    }
+  },
+})
 
 const CancelMonthly = (props) => {
+  const classes = useStyles()
+
   return (
-    <div className="cancelMonthlyMemberships col-md-4 col-sm-6 card shadow-sm">
-      <div className="transactions containerInner">
-        <div className="mt-1 mb-3 text-center">
-          <h6 className="d-inline font-weight-light">
-            Anything you'd like to cancel?
-          </h6>
-        </div>
-
-        <hr className="transaction-hr" />
-
-        <div className="collapse show" id="transactionsCollapse">
-          <div className="transactions-content">
-            <div className="row">
-              <div className="col-6">
-                <p className="card-title mb-0">
-                  <img
-                    className="img-responsive verizon-img text-center"
-                    src={require('../../img/verizon.png')}
-                    alt="coin img" />
-                  Verizon Wireless
-                </p>
-              </div>
-              <div className="col-6 text-right">
-                <p>$90.<span className="decimal">00</span></p>
-              </div>
-            </div>
-
-            <hr className="transaction-hr" />
-
-            <div className="row">
-              <div className="col-6">
-                <p className="card-title mb-0">
-                  <img
-                    className="img-responsive transaction-img text-center"
-                    src={require('../../img/coned.png')}
-                    alt="coin-img" />
-                  ConEdison
-                </p>
-              </div>
-              <div className="col-6 text-right">
-                <p>$85.<span className="decimal">21</span></p>
-              </div>
-            </div>
-
-            <hr className="transaction-hr" />
-
-            <div className="row">
-              <div className="col-6">
-                <p className="card-title mb-0">
-                  <img
-                    className="img-responsive spotify-img text-center"
-                    src={require('../../img/spotify.png')}
-                    alt="spotify-img" />
-                  Spotify
-                </p>
-              </div>
-              <div className="col-6 text-right">
-                <p>$10.<span className="decimal">91</span></p>
-              </div>
-            </div>
-
-            <hr className="transaction-hr" />
-
-            <div className="row">
-              <div className="col-6">
-                <p className="card-title mb-0">
-                  <img
-                    className="img-responsive transaction-img text-center"
-                    src={require('../../img/national-grid.png')}
-                    alt="paypal-img" />
-                  NationalGrid
-                </p>
-              </div>
-              <div className="col-6 text-right">
-                <p>$25.<span className="decimal">80</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button className="mt-2 btn btn-block btn-link-accounts">
-          Let's Take A Look
-        </button>
-      </div>
-    </div>
+    <Card className={classes.root}>
+      <CardHeader className={classes.header} subheader="Anything you'd like to cancel?" />
+      <hr />
+      <CardContent>
+        <CancelMonthlyTable />
+      </CardContent>
+    </Card>
   )
 }
 

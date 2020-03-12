@@ -31,8 +31,8 @@ function App() {
         <ConnectAccounts />
         <Income />
         <MonthBreakdown />
-        <WhereISpend />
-        <MonthGraph />
+        {/* <WhereISpend />
+        <MonthGraph /> */}
         <CancelMonthly />
         <CreditScore />
         <CreditCardDebt />
