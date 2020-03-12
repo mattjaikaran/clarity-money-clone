@@ -1,4 +1,5 @@
 import React from 'react'
+import Grid from '@material-ui/core/Grid'
 import './App.css'
 
 import Balance from './containers/Balance'
@@ -23,7 +24,7 @@ function App() {
     <div className="app">
       <Header />
       <Balance />
-      <div className="container">
+      <Grid container>
         <Spending />
         <Transactions />
         <Loan />
@@ -38,7 +39,7 @@ function App() {
         <HowItWorks />
         <ShareWithFriends />
         <ThankYou />
-      </div>
+      </Grid>
     </div>
   )
 }
