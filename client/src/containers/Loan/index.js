@@ -52,7 +52,8 @@ const Loan = (props) => {
         </Typography>
         <img 
           className={classes.piggy}
-          src={require('../../img/piggy-bank.png')} />
+          src={require('../../img/piggy-bank.png')} 
+          alt="piggy bank" />
         <Typography variant="h5" component="h2">
           Earn 1.70%
         </Typography>
