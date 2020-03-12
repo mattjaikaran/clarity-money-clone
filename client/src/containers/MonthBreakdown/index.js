@@ -1,25 +1,85 @@
-import React from 'react'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+    backgroundColor: '#192a56',
+    marginTop: '1em',
+    color: 'white',
+    textAlign: 'center'
+  },
+  incomeAmt: {
+    color: '#22d0a5',
+  },
+  incomeTitle: {
+    margin: '20px 0 5px 0',
+    color: '#22d0a5',
+  },
+  pieChart: {
+    marginTop: '2em'
+  },
+  math: {
+    margin: '1em 0'
+  },
+  spent: {
+    color: 'white'
+  },
+  left: {
+    color: '#22d0a5'
+  },
+})
 
 const MonthlyBreakdown = (props) => {
+  const classes = useStyles()
+
   return (
-    <div className="monthBreakdown col-md-4 col-sm-6 card shadow-sm">
-      <div className="text-center my-1">
-        <h6 className="text-white font-weight-normal mb-2">February</h6>
-        <p className="text-green mb-1">Income</p>
-        <h5 className="text-green font-weight-normal">$10,000</h5>
-        <span className="text-white">*graph*</span>
-        <div className="budget-spent-left row mt-4">
-          <div className="col-6 text-white">
-            <p className="mb-1">Spent</p>
-            <h5 className="font-weight-normal">$2000</h5>
-          </div>
-          <div className="col-6 text-green">
-            <p className="mb-1">Left</p>
-            <h5 className="font-weight-normal">$8000</h5>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Card className={classes.root}>
+      <CardContent>
+        <Typography variant="subtitle1" component="p">
+          April
+        </Typography>
+        <Typography className={classes.incomeTitle} variant="body" component="p">
+          Income
+        </Typography>
+        <Typography className={classes.incomeAmt} variant="h5" component="h2">
+          $10,000
+        </Typography>
+        <img 
+        className={classes.pieChart}
+        src={require('../../img/pie-chart.png')}
+        alt="pie chart" />
+        <Grid className={classes.math} container spacing={3}>
+          <Grid item xs={6}>
+            <Typography 
+              className={classes.spent} 
+              variant="subtitle1" 
+              component="p">
+              Spent
+            </Typography>
+            <Typography className={classes.spent} variant="h5" component="h2">
+              $6,000
+        </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography 
+            className={classes.left} 
+            variant="subtitle1" 
+            component="p">
+              April
+            </Typography>
+            <Typography className={classes.left} variant="h5" component="h2">
+              $4,000
+        </Typography>
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
   )
 }
 
