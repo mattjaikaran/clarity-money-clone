@@ -1,12 +1,33 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import Typography from '@material-ui/core/Typography'
+
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+    margin: '1em 0',
+    textAlign: 'center',
+    backgroundColor: 'black',
+    color: 'white'
+  },
+  title: {
+    padding: '2em'
+  }
+})
 
 const ThankYou = (props) => {
+  const classes = useStyles()
+
   return (
-    <div className="misc col-md-4 col-sm-6 p-5 card bg-black mb-3 shadow-sm">
-      <div className="containerInner p-5 text-center">
-        <h5>Thank You</h5>
-      </div>
-    </div>
+    <Card className={classes.root} variant="outlined">
+      <CardContent>
+        <Typography className={classes.title} variant="h4" component="h2">
+          Thank You
+        </Typography>
+      </CardContent>
+    </Card>
   )
 }
 
