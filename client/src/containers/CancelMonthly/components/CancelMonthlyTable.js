@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     width: '100%',
   },
   icon: {
-    maxWidth: '28px',
+    maxWidth: '24px',
+    // todo - get rows to be same height
   },
 })
 
