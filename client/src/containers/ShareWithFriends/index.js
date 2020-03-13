@@ -1,18 +1,56 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+    marginTop: '1em',
+    textAlign: 'center',
+    color: 'white',
+    backgroundColor: '#22d0a5'
+  },
+  icon: {
+    margin: '1em 0',
+  },
+  btnContainer: {
+    marginTop: '10px',
+    marginBottom: '1em'
+  },
+  btn: {
+    backgroundColor: 'black',
+    width: '100%',
+    color: 'white',
+    padding: '1em 0',
+    '&:hover': {
+      background: 'black',
+    }
+  },
+})
 
 const ShareWithFriends = (props) => {
+  const classes = useStyles()
+
   return (
-    <div className="shareWithFriends col-md-4 col-sm-6 card bg-green mb-3 shadow-sm">
-      <div className="containerInner p-3 text-center">
-        <img src={require('../../img/phone.png')} className="my-5 coin-img" alt="" />
-        <h5 className="text-white font-weight-nomral">
+    <Card className={classes.root}>
+      <CardContent>
+        <div className={classes.icon}>
+          <img src={require('../../img/piggy-bank-white.png')} />
+        </div>
+        <Typography variant="subtitle1" component="p">
           Love Clarity Money?
-            <br />
-            Share it with your friends!
-        </h5>
-        <button className="btn btn-block btn-blue">Invite Friends</button>
-      </div>
-    </div>
+          <br />
+          Share it with your friends!
+        </Typography>
+      </CardContent>
+      <CardActions className={classes.btnContainer}>
+        <Button className={classes.btn} size="medium">Invite Friends</Button>
+      </CardActions>
+    </Card>
   )
 }
 
