@@ -10,6 +10,8 @@ const useStyles = makeStyles({
   root: {
     color: 'white',
     textAlign: 'center',
+    padding: '2em',
+    height: '230px'
   },
   card: {
     marginTop: '1em',

@@ -12,21 +12,22 @@ const useStyles = makeStyles({
     marginTop: '1em',
     width: '100%',
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
   },
   creditCard: {
     color: 'white',
     marginTop: '1em',
     padding: '2em',
+    height: '200px'
   },
   logoContainer: {
     textAlign: 'left'
   },
   logo: {
-    maxWidth: '30px'
+    maxWidth: '30px',
   },
   balanceRow: {
-    marginTop: '1em',
+    marginTop: '2em',
     textAlign: 'left'
   },
   availableCreditRow: {
@@ -48,7 +49,8 @@ var items = [
     lastFour: 1234,
     creditLimit: 10000,
     minDue: 0,
-    logo: amex
+    logo: amex,
+    apr: 12.25,
   },
   {
     name: 'Chase Sapphire',
@@ -57,24 +59,26 @@ var items = [
     bg: 'black',
     lastFour: 4321,
     creditLimit: 7500,
-    minDue: 0,
-    logo: chase
+    minDue: 100,
+    logo: chase,
+    apr: 15.00,
   },
   {
     name: 'Discover',
-    balance: 500.24,
+    balance: 1500.24,
     company: 'Discover',
     bg: 'black',
-    lastFour: 4321,
+    lastFour: 9999,
     creditLimit: 15000,
-    minDue: 0,
-    logo: discover
+    minDue: 50,
+    logo: discover,
+    apr: 7.25,
   },
 ]
 
 const Item = (props) => {
   const classes = useStyles()
-  const { logo, name, lastFour, balance, creditLimit } = props.item
+  const { logo, name, lastFour, balance, creditLimit, minDue, apr } = props.item
 
   return (
     <Paper className={classes.creditCard} style={{ backgroundColor: props.item.bg }}>
@@ -97,7 +101,7 @@ const Item = (props) => {
         </Grid>
       </Grid>
       <Grid className={classes.balanceRow}>
-        <Grid item xs={4} alignItems="left">
+        <Grid item xs={12} alignItems="left">
           <Typography className={classes.balanceTitle} variant="body">
             Balance
           </Typography>
@@ -106,11 +110,25 @@ const Item = (props) => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid item xs={4} className={classes.availableCreditRow}>
-        <Typography variant="caption">Available Credit</Typography>
-        <Typography variant="subtitle1">
-          ${creditLimit - balance}
-        </Typography>
+      <Grid container className={classes.balanceRow} alignItems="center">
+        <Grid item xs={4}>
+          <Typography variant="caption">Available Credit</Typography>
+          <Typography variant="subtitle1">
+            ${creditLimit - balance}
+          </Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <Typography variant="caption">Min due</Typography>
+          <Typography variant="subtitle1">
+            ${minDue}
+          </Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <Typography variant="caption">APR</Typography>
+          <Typography variant="subtitle1">
+            {apr.toFixed(2)}%
+          </Typography>
+        </Grid>
       </Grid>
     </Paper>
   )
@@ -126,7 +144,7 @@ const CreditCardDebt = (props) => {
           Credit Cards: <span className={classes.creditCardTotal}>$2326.25</span>
         </Typography>
         <hr />
-        <Carousel>
+        <Carousel autoPlay={false}>
           {items.map(item => <Item key={item} item={item} />)}
         </Carousel>
       </CardContent>
