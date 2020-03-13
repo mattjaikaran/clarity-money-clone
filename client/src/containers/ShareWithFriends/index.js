@@ -39,7 +39,9 @@ const ShareWithFriends = (props) => {
     <Card className={classes.root}>
       <CardContent>
         <div className={classes.icon}>
-          <img src={require('../../img/piggy-bank-white.png')} />
+          <img 
+            src={require('../../img/piggy-bank-white.png')} 
+            alt="icon" />
         </div>
         <Typography variant="subtitle1" component="p">
           Love Clarity Money?

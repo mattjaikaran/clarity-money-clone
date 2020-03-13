@@ -45,7 +45,10 @@ const CreditScore = (props) => {
         {/* <Typography className={classes.graph} color="textSecondary" gutterBottom>
           *Graph*
         </Typography> */}
-        <img className={classes.graph} src={require('../../img/credit-score-graph.png')} />
+        <img 
+          className={classes.graph} 
+          src={require('../../img/credit-score-graph.png')} 
+          alt="graph" />
         <Typography variant="body" component="p">
           Your credit score increased by 25 points
         </Typography>
