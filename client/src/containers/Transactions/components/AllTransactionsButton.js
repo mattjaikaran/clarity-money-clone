@@ -47,7 +47,7 @@ export default function AllTransactionsButton() {
   return (
     <Grid container direction="column" alignItems="center">
       <Grid item xs={12}>
-        <ButtonGroup variant="contained" color="default" ref={anchorRef} aria-label="split button">
+        <ButtonGroup ref={anchorRef} aria-label="split button">
           <Button onClick={handleClick}>{options[selectedIndex]}</Button>
           <Button
             color="default"

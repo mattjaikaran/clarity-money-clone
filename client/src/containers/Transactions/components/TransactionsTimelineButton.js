@@ -15,38 +15,38 @@ const options = [
   'High to Low',
   'Low to High',
   'Outliers'
-];
+]
 
 export default function TransactionsTimelineButton() {
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [open, setOpen] = React.useState(false)
+  const anchorRef = React.useRef(null)
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
 
   const handleClick = () => {
-    console.info(`You clicked ${options[selectedIndex]}`);
-  };
+    console.info(`You clicked ${options[selectedIndex]}`)
+  }
 
   const handleMenuItemClick = (event, index) => {
-    setSelectedIndex(index);
-    setOpen(false);
-  };
+    setSelectedIndex(index)
+    setOpen(false)
+  }
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen);
-  };
+    setOpen(prevOpen => !prevOpen)
+  }
 
   const handleClose = event => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
+      return
     }
 
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <Grid container direction="column" alignItems="center">
       <Grid item xs={12}>
-        <ButtonGroup variant="contained" color="default" ref={anchorRef} aria-label="split button">
+        <ButtonGroup ref={anchorRef} aria-label="split button">
           <Button onClick={handleClick}>{options[selectedIndex]}</Button>
           <Button
             color="default"
@@ -55,8 +55,7 @@ export default function TransactionsTimelineButton() {
             aria-expanded={open ? 'true' : undefined}
             aria-label="select merge strategy"
             aria-haspopup="menu"
-            onClick={handleToggle}
-          >
+            onClick={handleToggle}>
             <ArrowDropDownIcon />
           </Button>
         </ButtonGroup>
@@ -66,8 +65,7 @@ export default function TransactionsTimelineButton() {
               {...TransitionProps}
               style={{
                 transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
-              }}
-            >
+              }}>
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList id="split-button-menu">
@@ -75,8 +73,7 @@ export default function TransactionsTimelineButton() {
                       <MenuItem
                         key={option}
                         selected={index === selectedIndex}
-                        onClick={event => handleMenuItemClick(event, index)}
-                      >
+                        onClick={event => handleMenuItemClick(event, index)}>
                         {option}
                       </MenuItem>
                     ))}
