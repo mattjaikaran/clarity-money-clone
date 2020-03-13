@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    padding: '25px 0!important',
+    padding: '45px 0!important',
     background: '#480048',
     background: '-webkit-linear-gradient(to bottom, #C04848, #480048)',
     background: 'linear-gradient(to right, #C04848, #480048)',
