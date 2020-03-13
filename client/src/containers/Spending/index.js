@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: '1rem',
+    marginTop: '1em',
+    width: '100%',
     backgroundColor: '#22d0a5',
     flexGrow: 1,
     textAlign: 'center'
@@ -32,7 +33,7 @@ const Spending = (props) => {
       <CardContent>
         <Typography className={classes.spent} color="textSecondary">
           You spent <span className={classes.moneySpent}>$80.88</span> <br />
-          the last few days
+          the last few days.
         </Typography>
         <img className={classes.coinImg} src={require("../../img/coin.png")} alt="coin" />
         <Typography variant="body2" component="p">
