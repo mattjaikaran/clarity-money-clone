@@ -169,7 +169,7 @@ hr.transaction-hr {
   padding: 5px;
 }
 .Carousel .Indicators .Indicator.Active {
-  color: white;
+  color: white !important;
 }
 .Indicator.Active:hover {
   color: #9E9E9E !important;
