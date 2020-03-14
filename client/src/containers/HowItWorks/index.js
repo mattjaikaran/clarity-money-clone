@@ -81,7 +81,7 @@ const HowItWorks = (props) => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Carousel>
+        <Carousel autoPlay={false}>
           {items.map(item => <Item key={item} item={item} />)}
         </Carousel>
       </CardContent>
