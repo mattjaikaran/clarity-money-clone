@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     color: 'white',
     padding: '1em 0',
     '&:hover': {
-      background: 'black',
+      background: '#263238',
     }
   },
 })
