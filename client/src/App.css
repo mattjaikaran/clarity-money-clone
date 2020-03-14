@@ -160,6 +160,20 @@ hr.transaction-hr {
   border-radius: 0.8rem;
 }
 
+/* materialui styles */
+.Carousel .Indicators {
+  margin-top: -25px !important;
+}
+.Carousel .Indicators .Indicator {
+  font-size: 6px !important;
+  padding: 5px;
+}
+.Carousel .Indicators .Indicator.Active {
+  color: white;
+}
+.Indicator.Active:hover {
+  color: #9E9E9E !important;
+}
 
 
 
