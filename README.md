@@ -1,6 +1,6 @@
 # Clarity Money Clone
 
-Built with React, Material-UI, Styled Components
+Built with React, Material-UI
 
 ## Available Scripts
 

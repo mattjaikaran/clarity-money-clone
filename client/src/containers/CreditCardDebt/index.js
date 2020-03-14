@@ -39,13 +39,14 @@ const useStyles = makeStyles({
 const chase = require('../../img/chase.png')
 const discover = require('../../img/discover-white.png')
 const amex = require('../../img/amex-white.png')
+const capitalOne = require('../../img/capital-one.png')
 
 var items = [
   {
     name: 'American Express Gold',
-    balance: 420.24,
+    balance: 420.69,
     company: 'Amex',
-    bg: '#EAB543',
+    bg: '#FFC107',
     lastFour: 1234,
     creditLimit: 10000,
     minDue: 0,
@@ -56,7 +57,7 @@ var items = [
     name: 'Chase Sapphire',
     balance: 4320.24,
     company: 'Chase',
-    bg: 'black',
+    bg: '#192a56',
     lastFour: 4321,
     creditLimit: 7500,
     minDue: 100,
@@ -67,12 +68,23 @@ var items = [
     name: 'Discover',
     balance: 1500.24,
     company: 'Discover',
-    bg: 'black',
+    bg: '#009688',
     lastFour: 9999,
     creditLimit: 15000,
     minDue: 50,
     logo: discover,
     apr: 7.25,
+  },
+  {
+    name: 'Capital One',
+    balance: 20500.24,
+    company: 'Capital One',
+    bg: '#607D8B',
+    lastFour: 6666,
+    creditLimit: 50000,
+    minDue: 550,
+    logo: capitalOne,
+    apr: 10.25,
   },
 ]
 
