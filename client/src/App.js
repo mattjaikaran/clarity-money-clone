@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 
+import NavBar from './containers/NavBar'
+import Footer from './containers/Footer'
 import Balance from './containers/Balance'
 import Header from './containers/Header'
 import Spending from './containers/Spending'
@@ -28,7 +30,6 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
   },
 }))
 
@@ -37,8 +38,11 @@ function App() {
 
   return (
     <div className="app">
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4}>
+      <Grid className={classes.root} container spacing={2}>
+        <Grid item xs={12}>
+          <NavBar />
+        </Grid>
+        <Grid item xs={12}>
           <Header />
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
@@ -80,6 +84,7 @@ function App() {
         <Grid item xs={12} sm={6} md={4}>
           <ThankYou />
         </Grid>
+        <Footer />
         {/* <WhereISpend />
         <MonthGraph /> */}
       </Grid>
