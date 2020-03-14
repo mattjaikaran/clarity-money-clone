@@ -51,40 +51,23 @@ const Balance = (props) => {
             {rows.map(row => (
               <TableRow key={row.name}>
                 <TableCell component="th" scope="row">
-                  <Typography variant="body2" component="p">
+                  <Typography 
+                    variant="body2" 
+                    component="p">
                     {row.name}
                   </Typography>
                 </TableCell>
-                <TableCell align="right">${row.amount.toFixed(2)}</TableCell>
+                <TableCell 
+                  className={
+                    row.name === 'Cash' && row.amount > 100 ? classes.positive : ''
+                  }
+                  align="right">
+                  ${row.amount.toFixed(2)}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
-        {/* <Grid className={classes.top} container spacing={3}>
-          <Grid item xs={6}>
-            <Typography variant="body2" component="p">
-              Cash
-            </Typography>
-          </Grid>
-          <Grid className={classes.number} item xs={6}>
-            <Typography className={classes.positive} variant="body2" component="p">
-              $4,470.39
-            </Typography>
-          </Grid>
-        </Grid>
-        <hr className={classes.hr} />
-        <Grid container spacing={3}>
-          <Grid item xs={6}>
-            <Typography variant="body2" component="p">
-              Credit Debt
-            </Typography>
-          </Grid>
-          <Grid className={classes.number} item xs={6}>
-            <Typography  variant="body2" component="p">
-              $1,038.22
-            </Typography>
-          </Grid>
-        </Grid> */}
       </CardContent>
     </Card>
   )
