@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
+import CardActions from '@material-ui/core/CardActions'
+import Button from '@material-ui/core/Button'
 
 import CancelMonthlyTable from './components/CancelMonthlyTable'
 
@@ -35,6 +37,9 @@ const useStyles = makeStyles({
       background: 'black',
     }
   },
+  btnContainer: {
+    marginTop: '10px',
+  },
 })
 
 const CancelMonthly = (props) => {
@@ -46,6 +51,11 @@ const CancelMonthly = (props) => {
       <hr />
       <CardContent>
         <CancelMonthlyTable />
+        <CardActions className={classes.btnContainer}>
+          <Button className={classes.btn} size="medium">
+            Let's Take a Look
+          </Button>
+        </CardActions>
       </CardContent>
     </Card>
   )
