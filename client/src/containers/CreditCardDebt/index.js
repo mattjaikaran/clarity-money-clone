@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
   root: {
-    marginTop: '1em',
     width: '100%',
     textAlign: 'center',
     color: 'white',
@@ -18,7 +17,6 @@ const useStyles = makeStyles({
     color: 'white',
     marginTop: '1em',
     padding: '2em',
-    height: '200px'
   },
   logoContainer: {
     textAlign: 'left'

@@ -142,7 +142,7 @@ function App(props) {
         <main className={classes.content}>
           <Grid className={classes.root} container spacing={2}>
             <Grid container spacing={2}>
-              <Grid item className={classes.item} xs={12}>
+              <Grid item xs={12}>
                 <Header />
               </Grid>
               <Grid item className={classes.item} xs={12} sm={6} md={4}>

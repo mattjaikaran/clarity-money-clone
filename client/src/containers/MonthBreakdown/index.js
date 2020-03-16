@@ -9,7 +9,6 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
     backgroundColor: '#192a56',
-    marginTop: '1em',
     color: 'white',
     textAlign: 'center'
   },

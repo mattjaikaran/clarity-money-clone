@@ -10,7 +10,6 @@ import CancelMonthlyTable from './components/CancelMonthlyTable'
 
 const useStyles = makeStyles({
   root: {
-    marginTop: '1em',
     width: '100%',
     textAlign: 'center'
   },

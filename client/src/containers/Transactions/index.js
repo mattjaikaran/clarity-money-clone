@@ -10,8 +10,7 @@ import TransactionsTable from './components/TransactionsTable'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: '1rem',
-    minWidth: 275,
+    width: '100%',
     flexGrow: 1,
   },
   title: {
