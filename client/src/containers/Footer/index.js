@@ -7,11 +7,16 @@ import PersonIcon from '@material-ui/icons/Person'
 import SearchIcon from '@material-ui/icons/Search'
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%',
+    width: '100%', 
+    position: 'fixed',
+    bottom: 0,
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
   },
-})
+}))
 
 export default function Footer() {
   const classes = useStyles()
