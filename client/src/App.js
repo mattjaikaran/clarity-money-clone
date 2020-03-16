@@ -54,6 +54,11 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
   },
+  header: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
@@ -140,11 +145,11 @@ function App(props) {
           </Hidden>
         </nav>
         <main className={classes.content}>
-          <Grid className={classes.root} container spacing={2}>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <Header />
-              </Grid>
+          <Grid className={classes.root}>
+            <Grid className={classes.header} item xs={12}>
+              <Header />
+            </Grid>
+            <Grid container spacing={3}>
               <Grid item className={classes.item} xs={12} sm={6} md={4}>
                 <Balance />
               </Grid>
