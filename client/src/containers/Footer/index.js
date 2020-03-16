@@ -9,10 +9,10 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%', 
+    width: '103%', 
     position: 'fixed',
     bottom: 0,
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       display: 'none',
     },
   },
