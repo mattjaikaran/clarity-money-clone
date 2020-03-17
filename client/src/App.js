@@ -10,7 +10,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import './App.css'
 
@@ -35,8 +35,10 @@ import HowItWorks from './containers/HowItWorks'
 import ShareWithFriends from './containers/ShareWithFriends'
 import ThankYou from './containers/ThankYou'
 
+import ProfileImg from './components/ProfileImg'
 
-const drawerWidth = 240;
+
+const drawerWidth = 200;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,6 +46,15 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
+  },
+  logo: {
+    maxWidth: '60px',
+    marginLeft: '15px',
+    marginTop: '1em',
+  },
+  navItem: {
+    fontSize: '22px',
+    padding: '10px'
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -62,10 +73,21 @@ const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: '#30455b',
+    color: '#fff',
+  },
+  active: {
+    backgroundColor: '#22d0a5', 
+    '&:hover': {
+      backgroundColor: '#22d0a5', 
+    }
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+  },
+  divider: {
+    borderBottom: '1px solid rgba(255,255,255, 0.2)'
   },
   item: {
     [theme.breakpoints.down('sm')]: {
@@ -86,25 +108,32 @@ function App(props) {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
-      <Divider />
+      <img 
+        className={classes.logo}
+        src={require('./img/logo.png')}
+        alt="logo" />
+      <div>
+        <ProfileImg 
+          initials="MJ" 
+          name="Matthew Jaikaran" />
+      </div>
       <List>
-        <ListItem button>
-          <ListItemIcon><DashboardIcon /></ListItemIcon>
-          <ListItemText primary="Dashboard" />
+        <ListItem className={classes.active} button>
+          <ListItemText className={classes.navItem} primary="Dashboard" />
         </ListItem>
+        <Divider className={classes.divider} />
         <ListItem button>
-          <ListItemIcon><AccountBalanceIcon /></ListItemIcon>
-          <ListItemText primary="Accounts" />
+          <ListItemText className={classes.navItem} primary="Accounts" />
         </ListItem>
+        <Divider className={classes.divider} />
         <ListItem button>
-          <ListItemIcon><SearchIcon /></ListItemIcon>
-          <ListItemText primary="Transactions" />
+          <ListItemText className={classes.navItem} primary="Transactions" />
         </ListItem>
+        <Divider className={classes.divider} />
         <ListItem button>
-          <ListItemIcon><PersonIcon /></ListItemIcon>
-          <ListItemText primary="Profile" />
+          <ListItemText className={classes.navItem} primary="Profile" />
         </ListItem>
+        <Divider className={classes.divider} />
       </List>
     </div>
   );
