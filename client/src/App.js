@@ -229,10 +229,10 @@ function App(props) {
                 <CreditCardDebt />
               </Grid>
               <Grid className={classes.bufferLg} item md={2} />
-              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <HowItWorks />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={2}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <ShareWithFriends />
               </Grid>
               <Grid className={classes.buffer} item md={2} />
