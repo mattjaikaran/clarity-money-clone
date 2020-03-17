@@ -6,18 +6,11 @@ import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import ListItemText from '@material-ui/core/ListItemText'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import './App.css'
 
-import DashboardIcon from '@material-ui/icons/Dashboard'
-import PersonIcon from '@material-ui/icons/Person'
-import SearchIcon from '@material-ui/icons/Search'
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 
 import Footer from './containers/Footer'
 import Balance from './containers/Balance'
@@ -38,7 +31,7 @@ import ThankYou from './containers/ThankYou'
 import ProfileImg from './components/ProfileImg'
 
 
-const drawerWidth = 200;
+const drawerWidth = '16.6%';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -92,6 +85,25 @@ const useStyles = makeStyles(theme => ({
   item: {
     [theme.breakpoints.down('sm')]: {
       marginTop: '1em',
+    },
+  },
+  buffer: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
+  bufferLg: {
+    [theme.breakpoints.only('md')]: {
+      display: 'flex',
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
     },
   },
 }))
@@ -179,43 +191,52 @@ function App(props) {
               <Header />
             </Grid>
             <Grid container spacing={3}>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.buffer} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <Balance />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <Spending />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.bufferLg} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
                 <Transactions />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.buffer} item lg={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <Loan />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.bufferLg} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
                 <ConnectAccounts />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <Income />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.buffer} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <MonthBreakdown />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
                 <CancelMonthly />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.bufferLg} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <CreditScore />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.buffer} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
                 <CreditCardDebt />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.bufferLg} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
                 <HowItWorks />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={2}>
                 <ShareWithFriends />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={4}>
+              <Grid className={classes.buffer} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={12} md={5} lg={3}>
                 <ThankYou />
               </Grid>
               <Footer />
