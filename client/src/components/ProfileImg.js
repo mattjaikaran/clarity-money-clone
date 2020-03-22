@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
   root: {
     textAlign: 'center',
+    width: '100%'
   },
   avatar: {
     backgroundColor: '#dee8f3',

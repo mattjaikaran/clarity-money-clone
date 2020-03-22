@@ -75,16 +75,25 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: '#22d0a5', 
     }
   },
+  avatar: {
+    width: '100%',
+  },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    [theme.breakpoints.up('sm')]: {
+      paddingTop: theme.spacing(3),
+      paddingBottom: 0,
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
+    
   },
   divider: {
     borderBottom: '1px solid rgba(255,255,255, 0.2)'
   },
   item: {
     [theme.breakpoints.down('sm')]: {
-      marginTop: '1em',
+      // marginTop: '1em',
     },
   },
   buffer: {
@@ -124,7 +133,7 @@ function App(props) {
         className={classes.logo}
         src={require('./img/logo.png')}
         alt="logo" />
-      <div>
+      <div className={classes.avatar}>
         <ProfileImg 
           initials="MJ" 
           name="Matthew Jaikaran" />
@@ -239,10 +248,10 @@ function App(props) {
               <Grid item className={classes.item} xs={12} sm={12} md={5} lg={3}>
                 <ThankYou />
               </Grid>
-              <Footer />
             </Grid>
           </Grid>
         </main>
+        <Footer />
       </Grid>
     </div>
   )
