@@ -92,8 +92,9 @@ const useStyles = makeStyles(theme => ({
     borderBottom: '1px solid rgba(255,255,255, 0.2)'
   },
   item: {
-    [theme.breakpoints.down('sm')]: {
-      // marginTop: '1em',
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: 0,
+      height: 'auto'
     },
   },
   buffer: {

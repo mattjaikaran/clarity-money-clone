@@ -4,14 +4,15 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
   root: {
     textAlign: 'center',
-    width: '100%'
+    width: '100%',
+    margin: '0 auto',
   },
   avatar: {
     backgroundColor: '#dee8f3',
     color: 'rgba(79,109,141,.8)',
     fontSize: '40px',
     borderRadius: '50%',
-    marginLeft: '45px',
+    margin: '0 auto',
     width: '100px',
     height: '90px',
   },
