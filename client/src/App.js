@@ -97,21 +97,32 @@ const useStyles = makeStyles(theme => ({
     },
   },
   buffer: {
+    [theme.breakpoints.only('sm')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.only('md')]: {
+      display: 'flex',
+    },
+    [theme.breakpoints.only('lg')]: {
+      display: 'flex',
+    },
+  },
+  bufferCustom: {
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.only('lg')]: {
       display: 'flex',
     },
   },
   bufferLg: {
+    [theme.breakpoints.only('sm')]: {
+      display: 'none',
+    },
     [theme.breakpoints.only('md')]: {
       display: 'flex',
     },
-    [theme.breakpoints.up('lg')]: {
-      display: 'none',
-    },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.only('lg')]: {
       display: 'none',
     },
   },
@@ -208,15 +219,15 @@ function App(props) {
                 <Spending />
               </Grid>
               <Grid className={classes.bufferLg} item md={2} />
-              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <Transactions />
               </Grid>
-              <Grid className={classes.buffer} item lg={2} />
+              <Grid className={classes.bufferCustom} item lg={2} />
               <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <Loan />
               </Grid>
               <Grid className={classes.bufferLg} item md={2} />
-              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <ConnectAccounts />
               </Grid>
               <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
@@ -226,15 +237,15 @@ function App(props) {
               <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <MonthBreakdown />
               </Grid>
-              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <CancelMonthly />
               </Grid>
               <Grid className={classes.bufferLg} item md={2} />
               <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <CreditScore />
               </Grid>
-              <Grid className={classes.buffer} item md={2} />
-              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={4}>
+              <Grid className={classes.bufferCustom} item md={2} />
+              <Grid item className={classes.item} xs={12} sm={6} md={5} lg={3}>
                 <CreditCardDebt />
               </Grid>
               <Grid className={classes.bufferLg} item md={2} />
