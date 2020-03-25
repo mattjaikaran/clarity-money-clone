@@ -9,12 +9,19 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '103%', 
+    width: '100%', 
     position: 'fixed',
     bottom: 0,
+    // paddingBottom: '5px',
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+    [theme.breakpoints.only('xs')]: {
+      height: '80px',
+    },
+  },
+  navItem: {
+    // marginBottom: '10px'
   },
 }))
 
@@ -31,10 +38,22 @@ export default function Footer() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Dashboard" icon={<DashboardIcon />} />
-      <BottomNavigationAction label="Accounts" icon={<AccountBalanceIcon />} />
-      <BottomNavigationAction label="Transactions" icon={<SearchIcon />} />
-      <BottomNavigationAction label="Profile" icon={<PersonIcon />} />
+      <BottomNavigationAction 
+        className={classes.navItem}
+        label="Dashboard" 
+        icon={<DashboardIcon />} />
+      <BottomNavigationAction 
+        className={classes.navItem}
+        label="Accounts" 
+        icon={<AccountBalanceIcon />} />
+      <BottomNavigationAction 
+        className={classes.navItem}
+        label="Transactions" 
+        icon={<SearchIcon />} />
+      <BottomNavigationAction 
+        className={classes.navItem}
+        label="Profile" 
+        icon={<PersonIcon />} />
     </BottomNavigation>
   )
 }

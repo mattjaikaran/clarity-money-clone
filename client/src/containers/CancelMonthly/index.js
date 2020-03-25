@@ -36,9 +36,6 @@ const useStyles = makeStyles({
       background: 'black',
     }
   },
-  btnContainer: {
-    marginTop: '10px',
-  },
 })
 
 const CancelMonthly = (props) => {

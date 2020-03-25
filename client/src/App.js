@@ -97,6 +97,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   buffer: {
+    [theme.breakpoints.only('xs')]: {
+      display: 'none',
+    },
     [theme.breakpoints.only('sm')]: {
       display: 'none',
     },
@@ -105,6 +108,7 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.only('lg')]: {
       display: 'flex',
+      marginRight: '1%'
     },
   },
   bufferCustom: {
@@ -116,6 +120,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   bufferLg: {
+    [theme.breakpoints.only('xs')]: {
+      display: 'none',
+    },
     [theme.breakpoints.only('sm')]: {
       display: 'none',
     },
