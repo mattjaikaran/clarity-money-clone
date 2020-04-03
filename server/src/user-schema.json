@@ -1,0 +1,39 @@
+{
+  "email": "average@gmail.com",
+  "password": "asdf1234",
+  "accountInfo": {
+    "firstName": "John",
+    "balance": {
+      "cash": 10000.51,
+      "creditCardDebt": 500.92
+    },
+    "transactions": [
+      {
+        "name": "Spotify",
+        "amount": 10.91
+      }
+    ],
+      "income": {
+        "total": 10000,
+        "spent": 6000,
+        "balance": 4000
+    },
+    "monthlyBills": [
+      {
+        "name": "Verizon Wireless",
+        "amount": 90.00
+      }
+    ],
+    "creditScore": 8500,
+    "creditCards": [
+      {
+        "name": "American Express Gold",
+        "accountNo": 1234,
+        "availableCredit": 10000,
+        "balance": 420.69,
+        "minDue": 0,
+        "apr": 12.25
+      }
+    ]
+  }
+}

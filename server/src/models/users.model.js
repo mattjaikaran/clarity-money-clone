@@ -10,6 +10,7 @@ module.exports = function (app) {
     email: { type: String, unique: true, lowercase: true },
     password: { type: String },
     account: {
+      name: { type: String },
       balance: {
         cash: { type: Number },
         creditCardDebt: { type: Number },
@@ -28,7 +29,8 @@ module.exports = function (app) {
       monthlyBills: [
         {
           name: { type: String },
-          amount: { type: Number }
+          amount: { type: Number },
+          icon: { type: String },
         }
       ],
       creditScore: { type: Number },
